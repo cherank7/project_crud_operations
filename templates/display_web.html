@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPIC_name</title>
+</head>
+<body>
+    <center>
+        <h1>DISPLAY_WEB</h1>
+        <table border="2px">
+            <tr>
+                <th>topic_name</th>
+                <th>name</th>
+                <th>dob</th>
+                <th>email</th>
+            </tr>
+        {% for i in webpages %}
+            <tr>
+                <th>{{ i.topic_name }}</th>
+                <th>{{ i.name }}</th>
+                <th>{{ i.dob }}</th>
+                <th>{{ i.email }}</th>
+            </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
